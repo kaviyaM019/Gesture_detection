@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart TV Gesture Control</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Smart TV Gesture Control</h1>
+        
+        <!-- Main Video Display -->
+        <div class="tv-screen">
+            <input type="file" id="videoInput" accept="video/*">
+            <video id="videoPlayer" controls>
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <!-- Gesture Detection Area -->
+        <div class="gesture-area">
+            <video id="webcam" autoplay playsinline></video>
+            <canvas id="canvas"></canvas>
+            
+            <!-- Gesture Guide -->
+            <div class="gesture-guide">
+                <h3>Gesture Guide:</h3>
+                <ul>
+                    <li>👍 Thumbs Up: Volume Up</li>
+                    <li>👎 Thumbs Down: Volume Down</li>
+                    <li>← Left Swipe: Rewind 10s</li>
+                    <li>→ Right Swipe: Forward 10s</li>
+                    <li>✋ Stop: Pause/Play</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <div class="controls">
+            <button id="startCamera">Start Gesture Control</button>
+            <div class="status">
+                <p>Current Volume: <span id="volumeLevel">50%</span></p>
+                <p>Detected Gesture: <span id="detectedGesture">None</span></p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
